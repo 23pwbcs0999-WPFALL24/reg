@@ -2,42 +2,264 @@
 <html>
 <head>
   <title>Society Event Registration</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --accent: #f59e0b;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% 14%, rgba(245, 158, 11, 0.18), transparent 38%),
+        radial-gradient(circle at 85% 8%, rgba(15, 109, 141, 0.16), transparent 34%),
+        linear-gradient(140deg, #f1f7ff 0%, #f7fbff 52%, #fef7ec 100%);
+      padding: 28px 16px 40px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 18px 20px 28px;
       text-align: center;
-      background-color: #f9f9f9;
-      padding: 50px;
+      margin: 0 auto;
     }
-    h1 {
-      color: #333;
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 6px 0 14px;
     }
-    .button {
+
+    .logo {
+      width: min(340px, 86vw);
+      height: auto;
       display: block;
-      width: 250px;
-      margin: 20px auto;
-      padding: 15px;
-      font-size: 18px;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3.3vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 12px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .module-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      margin: 0;
+      text-align: left;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(13, 44, 78, 0.16);
+    }
+
+    .module-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      color: var(--primary-deep);
+    }
+
+    .module-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .module-card ul {
+      margin: 0 0 16px 18px;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .module-card li {
+      padding-left: 2px;
+      margin-bottom: 3px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
       color: white;
-      background-color: #007bff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
     }
+
     .button:hover {
-      background-color: #0056b3;
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    .button.disabled {
+      background: linear-gradient(135deg, #8b98b0 0%, #6c7d99 100%);
+      box-shadow: 0 8px 18px rgba(80, 99, 130, 0.2);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 18px;
+      color: #5f6f8a;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 16px 12px 28px;
+      }
+
+      .hero {
+        border-radius: 16px;
+        padding: 14px 14px 20px;
+      }
+
+      .module-card {
+        border-radius: 14px;
+        padding: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Register for Your Module</h1>
+  <div class="container">
+    <header class="hero">
+      <div class="brand">
+        <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      </div>
+      <h1>TechMesh 2026 Event Registration</h1>
+      <p>Choose your module and register for the competitions that match your talent. Explore creative, technical, robotics, gaming, and data science tracks in one professional event portal.</p>
+    </header>
 
-  <a class="button" href="https://forms.gle/v32brRM5jvKQVYcW7" target="_blank">Non Technical Modules</a>
-  <a class="button" href="https://forms.gle/7r1fM7e4WBx9syHFA" target="_blank">Technical Modules</a>
-  <a class="button" href="https://forms.gle/5T1MHSdSjA1e7C8r8" target="_blank">E-Gaming Module</a>
-  <a class="button" href="https://forms.gle/17U8h6MVWAB1XJBs9" target="_blank">Engineering Competitions</a>
-  <a class="button" href="https://forms.gle/6c4hDnceVuodJXQc9" target="_blank">Creative &amp; Innovation Competitions Registration</a>
+    <main class="grid">
+      <section class="module-card">
+        <h2>Non Technical Modules</h2>
+        <p>Fun, creative, and communication-based competitions designed for all participants.</p>
+        <ul>
+          <li>Scavenger Hunt</li>
+          <li>Escape Room</li>
+          <li>Murder Mystery</li>
+          <li>Photography</li>
+          <li>Videography</li>
+          <li>Words Crush</li>
+          <li>Calligraphy &amp; Painting</li>
+          <li>Argumentative Essay Writing</li>
+          <li>Ludo &amp; Chess Championship</li>
+        </ul>
+        <a class="button" href="https://forms.gle/v32brRM5jvKQVYcW7" target="_blank">Register: Non Technical</a>
+      </section>
+
+      <section class="module-card">
+        <h2>Technical Modules</h2>
+        <p>Innovation and coding-focused challenges to test technical problem-solving skills.</p>
+        <ul>
+          <li>AI Hackathon</li>
+          <li>Webathon</li>
+          <li>Speed Challenges (Speed Coding, Speed Writing, and Speed Mapping)</li>
+          <li>Tech Debate</li>
+        </ul>
+        <a class="button" href="https://forms.gle/7r1fM7e4WBx9syHFA" target="_blank">Register: Technical</a>
+      </section>
+
+      <section class="module-card">
+        <h2>Robotics Module</h2>
+        <p>Hands-on robotics competitions for control, speed, and intelligent navigation.</p>
+        <ul>
+          <li>Line Following Robot</li>
+          <li>Mystery Box</li>
+          <li>Sumo Bot</li>
+          <li>Robo Futsal</li>
+          <li>Off-Road Racing</li>
+          <li>Obstacle Avoider</li>
+        </ul>
+        <a class="button" href="https://forms.gle/17U8h6MVWAB1XJBs9" target="_blank">Register: Robotics</a>
+      </section>
+
+      <section class="module-card">
+        <h2>E-Gaming Module</h2>
+        <p>Competitive gaming arena featuring solo and team-based esports titles.</p>
+        <ul>
+          <li>FIFA Solo</li>
+          <li>Tekken Solo</li>
+          <li>Valorant 5v5</li>
+          <li>CS2 5v5</li>
+          <li>Call of Duty 4v4</li>
+          <li>PUBG 4v4</li>
+          <li>Free Fire</li>
+        </ul>
+        <a class="button" href="https://forms.gle/5T1MHSdSjA1e7C8r8" target="_blank">Register: E-Gaming</a>
+      </section>
+
+      <section class="module-card">
+        <h2>Data Science Module</h2>
+        <p>Data-driven competitions focused on analysis, modeling, and algorithmic thinking.</p>
+        <ul>
+          <li>Data Doppelganger</li>
+          <li>City Whisperer (Algorithm Competition | Data Science Track)</li>
+        </ul>
+        <a class="button disabled" href="https://forms.gle/nXWkFsAYhscs8qDX9">Data Science & Algrithm</a>
+      </section>
+    </main>
+
+    <p class="footer-note">TechMesh 2026 | Build, Create, Compete.</p>
+  </div>
 
 </body>
 </html>
