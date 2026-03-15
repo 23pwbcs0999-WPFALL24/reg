@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Techmesh Robotics Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 10%, rgba(15, 109, 141, 0.15), transparent 34%),
+        radial-gradient(circle at 84% 6%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 740px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.3rem;
+    }
+
+    .toc ul,
+    .rule-card ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .rule-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      color: #163a6f;
+    }
+
+    .rule-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>TECHMESH - Rule Book (Robotics)</h1>
+      <p>Read all event rules before registration and participation. Organizers and judges may update rules if required.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#official-entry-structure">Official Entry Structure</a></li>
+        <li><a href="#robo-futsal">Robo Futsal</a></li>
+        <li><a href="#lfr">LFR</a></li>
+        <li><a href="#obstacle-avoider">Obstacle Avoider</a></li>
+        <li><a href="#off-road-racing">Off-Road Racing</a></li>
+        <li><a href="#sumo-war">Sumo War</a></li>
+        <li><a href="#mystery-box">Mystery Box</a></li>
+        <li><a href="#speed-wiring">Speed Wiring</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="official-entry-structure">
+      <h3>Official Entry Structure (Fee and Team Size)</h3>
+      <ul>
+        <li>Line Following Robot (1800) - 4 Members</li>
+        <li>Mystery Box (2000) - 2 Person</li>
+        <li>Sumo Bot (2500) - 3 Person</li>
+        <li>Robo Futsal (1800) - 4 Person</li>
+        <li>Off-Road Racing (1800) - 3 Person</li>
+        <li>Obstacle Avoider (1800) - 3 Person</li>
+        <li>Project Exhibition (1500) - 2 Person</li>
+        <li>Tech IQ (1000) - Solo</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="robo-futsal">
+      <h3>Robo Futsal</h3>
+      <ul>
+        <li>Team size: 4 person.</li>
+        <li>1v1 futsal competition.</li>
+        <li>Robot weight limit: 800g.</li>
+        <li>Microcontroller required.</li>
+        <li>Any wireless transmitter allowed.</li>
+        <li>Any chassis material allowed.</li>
+        <li>Maximum dimensions: 8 x 8 inches.</li>
+        <li>Any robot shape allowed within dimensions.</li>
+        <li>Battery maximum: 12V.</li>
+        <li>No pushing opponent (penalty: -1 goal).</li>
+        <li>Same robot cannot be used by multiple teams.</li>
+        <li>Arena size: 6 x 4 ft.</li>
+        <li>Reconnect allowance: 10 seconds.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="lfr">
+      <h3>LFR</h3>
+      <ul>
+        <li>Team size: 4 members.</li>
+        <li>Use microcontroller and IR sensor.</li>
+        <li>Any chassis is allowed.</li>
+        <li>Dimensions must be within 8 x 8 inches.</li>
+        <li>Any motor shield is allowed.</li>
+        <li>Battery maximum: 12V.</li>
+        <li>Bot cannot be touched during the run.</li>
+        <li>Maximum 3 tries; each extra try adds 3 seconds penalty.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="obstacle-avoider">
+      <h3>Obstacle Avoider</h3>
+      <ul>
+        <li>Team size: 3 person.</li>
+        <li>No RPM limit.</li>
+        <li>Robot size must be 8 x 8 inches or less.</li>
+        <li>Battery maximum: 12V.</li>
+        <li>Use microcontroller and ultrasonic sensors.</li>
+        <li>3 tries allowed; each extra try adds 3 seconds.</li>
+        <li>Touching wall adds 2 seconds.</li>
+        <li>Bot must move or will be disqualified.</li>
+        <li>Judges may modify rules when needed.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="off-road-racing">
+      <h3>Off-Road Racing</h3>
+      <ul>
+        <li>Team size: 3 person.</li>
+        <li>Microcontroller required.</li>
+        <li>No RPM limit.</li>
+        <li>Chassis must be 10 x 10 inches or less.</li>
+        <li>Any motor shield is allowed.</li>
+        <li>12V battery required (maximum 12V).</li>
+        <li>Touching wall adds 2 seconds.</li>
+        <li>3 tries allowed; each extra try adds 3 seconds.</li>
+        <li>Judges may modify rules when needed.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="sumo-war">
+      <h3>Sumo War</h3>
+      <ul>
+        <li>Team size: 3 person.</li>
+        <li>Maximum 3 rounds for every match.</li>
+        <li>Two robots enter the arena at the same time.</li>
+        <li>Any remote-control system is allowed.</li>
+        <li>Robot can move in any direction.</li>
+        <li>Any RPM motors are allowed.</li>
+        <li>No restriction on chassis type.</li>
+        <li>Robot dimensions must not exceed 12 x 12 inches including wheels.</li>
+        <li>Any motor shield is allowed.</li>
+        <li>Robot must not damage another robot or arena.</li>
+        <li>Microcontroller is mandatory. Without it, team is disqualified.</li>
+        <li>Robot weight must not exceed 8kg.</li>
+        <li>Weight is checked before every round.</li>
+        <li>Any battery is allowed up to 24V maximum.</li>
+        <li>The robot that pushes opponent out wins the round.</li>
+        <li>Team winning two rounds is the match winner.</li>
+        <li>Touching your robot during competition is not allowed.</li>
+      </ul>
+      <p><strong>Winning Criteria:</strong> Multiple circles will be present in the arena and each match has two minutes. At the end of time, the robot closest to the center wins the round. Any robot pushed out of arena is eliminated.</p>
+    </section>
+
+    <section class="rule-card" id="mystery-box">
+      <h3>Mystery Box</h3>
+      <ul>
+        <li>Team size: 2 person.</li>
+        <li>Teams receive a sealed mystery box with electronic or mechanical components.</li>
+        <li>Teams must build a working prototype using only provided materials.</li>
+        <li>No external components or tools unless allowed by organizers.</li>
+      </ul>
+      <p><strong>Time Limit:</strong> Teams are given a fixed time (for example, 2-3 hours) to complete the prototype. The challenge is revealed only after opening the box. Teams must design, assemble, and demonstrate within the given time.</p>
+      <p><strong>Judging Criteria:</strong> Creativity and innovation, prototype functionality, efficient use of materials, team collaboration, and problem-solving. Damage to components or rule violations may lead to disqualification. Judges' decision is final.</p>
+    </section>
+
+    <section class="rule-card" id="speed-wiring">
+      <h3>Speed Wiring</h3>
+      <ul>
+        <li>Maximum 3-4 members in one team.</li>
+        <li>Teams are assigned one or more circuits to complete in the shortest time.</li>
+      </ul>
+      <p><strong>Winning Criteria:</strong> Time and accuracy will be considered while checking the program. Organizers can amend any rule before the competition. Rules are discussed with team leaders before the event. Judges' decision is final and cannot be changed after announcement.</p>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>
