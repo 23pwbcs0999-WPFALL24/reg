@@ -115,6 +115,34 @@
       text-decoration: underline;
     }
 
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      background: #fbfdff;
+    }
+
+    th,
+    td {
+      border: 1px solid #dce6f2;
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #eef5fc;
+      color: #123f66;
+      font-weight: 700;
+    }
+
     .back-link {
       display: inline-block;
       margin-top: 16px;
@@ -150,15 +178,183 @@
     <header class="hero">
       <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
       <h1>TECHMESH - Rule Book (Technical Core)</h1>
-      <p>Official rules for Speed Coding, Speed Mapping, and Tech Debate.</p>
+      <p>Official rules for Webathon, Speed Coding, Speed Wiring, Speed Mapping, and Tech Debate.</p>
     </header>
 
     <section class="toc">
       <h2>Table of Contents</h2>
       <ul>
+        <li><a href="#webathon">Webathon</a></li>
         <li><a href="#speed-coding">Speed Coding</a></li>
+        <li><a href="#speed-wiring">Speed Wiring</a></li>
         <li><a href="#speed-mapping">Speed Mapping</a></li>
         <li><a href="#tech-debate">Tech Debate</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="webathon">
+      <h2>MODULE: WEBATHON</h2>
+      <p><strong>TechMesh 2026 | Technical Module</strong></p>
+      <p><strong>Category:</strong> Technical Core</p>
+      <p><strong>Format:</strong> Team-Based Web Development Challenge</p>
+      <p><strong>Duration:</strong> 1 Day (Live Competition)</p>
+
+      <h3>1. Overview</h3>
+      <p>Webathon is a live web development competition in which teams design and build a functional web solution based on a problem statement announced on the event day. Teams will be assessed on functionality, user experience, code quality, creativity, and presentation.</p>
+
+      <h3>2. Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>2 Members</td></tr>
+            <tr><td>Team Lead</td><td>1 Member responsible for official communication with organizers</td></tr>
+            <tr><td>Eligibility</td><td>Open to university-level students</td></tr>
+            <tr><td>Devices</td><td>Teams must bring their own laptops</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3. Event Day Flow</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time Block</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Opening Brief</td><td>Problem statement, rules, and judging criteria are explained</td></tr>
+            <tr><td>Development Window</td><td>Teams develop their complete solution within the allotted time</td></tr>
+            <tr><td>Submission</td><td>Code and deployed/demo link must be submitted before the deadline</td></tr>
+            <tr><td>Evaluation Round</td><td>Judges test and evaluate all submissions</td></tr>
+            <tr><td>Final Pitch</td><td>Short demo and Q&amp;A, if required by the organizers</td></tr>
+            <tr><td>Results</td><td>Winners are announced</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4. Challenge Requirements</h3>
+      <p>Teams must develop a responsive web solution for the assigned problem statement. The solution must include, at minimum:</p>
+      <ul>
+        <li>A home page</li>
+        <li>A core feature workflow representing the main user action</li>
+        <li>Basic data handling, including form input, validation, and display</li>
+        <li>Error handling for invalid input</li>
+        <li>A mobile-friendly and responsive layout</li>
+      </ul>
+      <p>Teams may choose to build:</p>
+      <ul>
+        <li>A frontend-only solution using mock or static data</li>
+        <li>A full-stack application, which will be considered a bonus if a working backend is included</li>
+      </ul>
+      <p>All core code must be written during the competition hours.</p>
+
+      <h3>5. Allowed Technologies</h3>
+      <p>The following technologies are permitted:</p>
+      <ul>
+        <li>HTML, CSS, JavaScript, and TypeScript</li>
+        <li>React, Vue, or other frontend frameworks</li>
+        <li>Node.js, Express, Firebase, Supabase, or similar backend tools</li>
+        <li>UI libraries and CSS frameworks</li>
+        <li>Open-source packages</li>
+        <li>AI tools, provided they are used only as assistance and not for full project generation or blind copy-paste</li>
+      </ul>
+
+      <h3>6. Internet and Resource Policy</h3>
+      <ul>
+        <li>Internet access is allowed for documentation, package installation, and debugging references.</li>
+        <li>Copying complete templates, cloned projects, or full repositories is strictly prohibited.</li>
+        <li>Teams must be able to explain every major part of their code during evaluation.</li>
+      </ul>
+
+      <h3>7. Submission Requirements</h3>
+      <p>Each team must submit the following:</p>
+      <ul>
+        <li>Source code as a ZIP file or repository link</li>
+        <li>A README file containing:</li>
+        <li>Project overview</li>
+        <li>Setup instructions</li>
+        <li>Tech stack</li>
+        <li>Team member names</li>
+        <li>Demo evidence, which may include:</li>
+        <li>A live project link, or</li>
+        <li>A recorded walkthrough of 2 to 4 minutes, or</li>
+        <li>An on-site runnable project</li>
+        <li>Optional supporting material:</li>
+        <li>Architecture diagram</li>
+        <li>Known limitations</li>
+      </ul>
+
+      <h3>8. Judging Criteria (100 Marks)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>Evaluation Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Problem Understanding</td><td>10</td><td>Relevance of the solution to the given problem</td></tr>
+            <tr><td>Functionality</td><td>25</td><td>Correctness and completeness of features</td></tr>
+            <tr><td>UI/UX and Responsiveness</td><td>20</td><td>Clean design, usability, and mobile support</td></tr>
+            <tr><td>Code Quality</td><td>15</td><td>Structure, readability, and maintainability</td></tr>
+            <tr><td>Creativity and Innovation</td><td>10</td><td>Originality of idea and implementation</td></tr>
+            <tr><td>Performance and Reliability</td><td>10</td><td>Speed, stability, and error handling</td></tr>
+            <tr><td>Presentation and Q&amp;A</td><td>10</td><td>Clarity, confidence, and technical understanding</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>9. Penalties</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Violation</th>
+              <th>Penalty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Late submission</td><td>-5 marks for every 10 minutes</td></tr>
+            <tr><td>Plagiarism or copied project</td><td>Immediate disqualification</td></tr>
+            <tr><td>Using a prebuilt project prepared before the event</td><td>Immediate disqualification</td></tr>
+            <tr><td>Inability to explain submitted code</td><td>Up to -15 marks</td></tr>
+            <tr><td>Misconduct or interference with other teams</td><td>Warning followed by disqualification</td></tr>
+            <tr><td>Missing required submission items</td><td>-5 to -15 marks at judge discretion</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>10. Tie-Break Policy</h3>
+      <p>If two or more teams achieve the same score:</p>
+      <ul>
+        <li>The team with higher Functionality marks will rank higher.</li>
+        <li>If still tied, the team with higher UI/UX marks will rank higher.</li>
+        <li>If still tied, judges may conduct a short technical Q&amp;A to decide the final ranking.</li>
+      </ul>
+
+      <h3>11. Code of Conduct</h3>
+      <p>All participants must:</p>
+      <ul>
+        <li>Respect organizers, judges, and fellow participants</li>
+        <li>Refrain from harassment, abuse, or disruptive behavior</li>
+        <li>Accept that judges' decisions are final</li>
+      </ul>
+
+      <h3>12. Organizer Notes</h3>
+      <ul>
+        <li>Organizers may adjust the schedule according to event flow.</li>
+        <li>Any rule changes will be communicated equally to all teams before implementation.</li>
       </ul>
     </section>
 
@@ -180,6 +376,30 @@
         <li>Efficiency: Optimized and well-structured code.</li>
         <li>Uniqueness: Creativity and originality in solving the problem.</li>
         <li>Interface and Presentation: Quality of user interface and usability of solution.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="speed-wiring">
+      <h2>Speed Wiring</h2>
+      <h3>Materials Provided</h3>
+      <ul>
+        <li>Electronic wires</li>
+        <li>Breadboard</li>
+        <li>Required ICs and basic components</li>
+      </ul>
+      <h3>Rules</h3>
+      <ul>
+        <li>Maximum 3-4 members in one team.</li>
+        <li>Task will be given on the spot.</li>
+        <li>Teams must use only provided components.</li>
+        <li>Participants have 30 minutes to complete the circuit.</li>
+        <li>External materials or components are not allowed.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Completion Time</li>
+        <li>Workable Circuit: Circuit must function correctly.</li>
+        <li>Logic: Proper understanding and implementation of electronic design.</li>
       </ul>
     </section>
 
