@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechMesh Technical Core Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 10%, rgba(15, 109, 141, 0.15), transparent 34%),
+        radial-gradient(circle at 84% 6%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 740px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.28rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      color: #163a6f;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>TECHMESH - Rule Book (Technical Core)</h1>
+      <p>Official rules for Speed Coding, Speed Mapping, and Tech Debate.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#speed-coding">Speed Coding</a></li>
+        <li><a href="#speed-mapping">Speed Mapping</a></li>
+        <li><a href="#tech-debate">Tech Debate</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="speed-coding">
+      <h2>Speed Coding</h2>
+      <h3>Task</h3>
+      <p>Participants will be given a coding task on the spot during the competition.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants have 2 hours to complete the task.</li>
+        <li>Participants must bring their own laptops.</li>
+        <li>Participants must arrange their own internet connection.</li>
+        <li>Use of AI tools and the internet is allowed.</li>
+        <li>All code must be written during competition time.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Completion Time: Faster solutions are preferred.</li>
+        <li>Efficiency: Optimized and well-structured code.</li>
+        <li>Uniqueness: Creativity and originality in solving the problem.</li>
+        <li>Interface and Presentation: Quality of user interface and usability of solution.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="speed-mapping">
+      <h2>Speed Mapping</h2>
+      <h3>Format</h3>
+      <ul>
+        <li>Competition is conducted in 1 vs 1 format.</li>
+      </ul>
+      <h3>Rules</h3>
+      <ul>
+        <li>The host will provide a design or mapping task.</li>
+        <li>Each participant must replicate the given design as quickly as possible.</li>
+        <li>Competition is conducted in multiple knockout rounds.</li>
+        <li>Winner of each round advances to next stage.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>The participant who completes the design first and correctly wins the round and advances.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="tech-debate">
+      <h2>Tech Debate</h2>
+      <h3>Format</h3>
+      <p>Competition is conducted in debate format where participants present arguments on technology-related topics.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Debate topics are announced on the spot.</li>
+        <li>Participants are given short preparation time before debate starts.</li>
+        <li>Each participant or team gets fixed time to present arguments.</li>
+        <li>Discussion must remain focused on technology-related aspects.</li>
+        <li>Respectful and professional communication must be maintained.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Argument Strength: Logical and well-supported arguments.</li>
+        <li>Technical Knowledge: Understanding of the technology topic.</li>
+        <li>Confidence and Communication: Clarity, confidence, and presentation skills.</li>
+        <li>Rebuttal Ability: Effective response to opponent arguments.</li>
+      </ul>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>

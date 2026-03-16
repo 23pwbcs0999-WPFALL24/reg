@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechMesh Non-Technical Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 10%, rgba(15, 109, 141, 0.15), transparent 34%),
+        radial-gradient(circle at 84% 6%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 740px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.28rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      color: #163a6f;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>TECHMESH - Rule Book (Non Technical)</h1>
+      <p>Official rules for non-technical competitions and creative events.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#scavenger-hunt">Scavenger Hunt</a></li>
+        <li><a href="#escape-room">Escape Room</a></li>
+        <li><a href="#murder-mystery">Murder Mystery</a></li>
+        <li><a href="#photography">Photography</a></li>
+        <li><a href="#videography">Videography</a></li>
+        <li><a href="#words-crush">Words Crush</a></li>
+        <li><a href="#calligraphy-painting">Calligraphy and Painting</a></li>
+        <li><a href="#argumentative-essay">Argumentative Essay Writing</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="scavenger-hunt">
+      <h2>Scavenger Hunt</h2>
+      <h3>Format</h3>
+      <p>Participants take part in a treasure-hunt style activity by locating clues and completing tasks around the event area.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants receive the first clue at competition start.</li>
+        <li>Each clue leads to next location or task.</li>
+        <li>Teams must follow clues in the correct order.</li>
+        <li>Participants must remain within designated event area.</li>
+        <li>Damaging property or interfering with other teams leads to disqualification.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>The team that completes all clues and reaches final point first is declared winner.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="escape-room">
+      <h2>Escape Room</h2>
+      <h3>Format</h3>
+      <p>Participants work together to solve puzzles and clues to escape within given time.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants enter the escape room in teams.</li>
+        <li>Teams must solve puzzles, riddles, or tasks to progress.</li>
+        <li>Team must complete all tasks within the given time limit.</li>
+        <li>Participants are not allowed to damage props or equipment.</li>
+        <li>Hints may be provided by host depending on round rules.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>The team that escapes in the shortest time wins.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="murder-mystery">
+      <h2>Murder Mystery</h2>
+      <h3>Format</h3>
+      <p>Participants analyze clues and information to identify the culprit in a fictional mystery scenario.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants are given a story scenario and related clues.</li>
+        <li>Teams analyze information to determine the correct suspect.</li>
+        <li>Participants may discuss within team but cannot communicate with other teams.</li>
+        <li>Final answer must be submitted within given time limit.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Team that correctly identifies culprit with logical reasoning will win.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="photography">
+      <h2>Photography</h2>
+      <h3>Format</h3>
+      <p>Participants capture photographs based on a given theme during the event.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants must use their own camera or mobile phone.</li>
+        <li>Photos must be captured during event time.</li>
+        <li>Basic editing is allowed, but heavy manipulation is not permitted.</li>
+        <li>Participants must submit photos before deadline.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Creativity</li>
+        <li>Composition</li>
+        <li>Relevance to the theme</li>
+        <li>Visual quality</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="videography">
+      <h2>Videography</h2>
+      <h3>Format</h3>
+      <p>Participants create a short video based on the given theme or event environment.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants must record the video during the event.</li>
+        <li>Videos must follow specified time duration given by organizers.</li>
+        <li>Participants may use their own devices and basic editing tools.</li>
+        <li>Final video must be submitted before deadline.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Storytelling</li>
+        <li>Creativity</li>
+        <li>Video quality</li>
+        <li>Editing and presentation</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="words-crush">
+      <h2>Words Crush</h2>
+      <h3>Format</h3>
+      <p>Participants solve word-based puzzles and challenges.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants are given a set of word puzzles or challenges.</li>
+        <li>All answers must be submitted within given time limit.</li>
+        <li>Participants are not allowed to use internet or external help.</li>
+        <li>All answers must be written clearly.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Participant who solves highest number of correct answers wins.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="calligraphy-painting">
+      <h2>Calligraphy and Painting</h2>
+      <h3>Format</h3>
+      <p>Participants create calligraphy or painting artwork based on a given theme.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Participants must bring their own art materials unless otherwise specified.</li>
+        <li>Artwork must be created during competition time.</li>
+        <li>Participants must follow given theme or topic.</li>
+        <li>Artwork must be original and created individually.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Creativity</li>
+        <li>Artistic skill</li>
+        <li>Neatness and presentation</li>
+        <li>Relevance to the theme</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="argumentative-essay">
+      <h2>Argumentative Essay Writing</h2>
+      <h3>Format</h3>
+      <p>Participants write an essay on a given topic that requires presenting arguments and opinions.</p>
+      <h3>Rules</h3>
+      <ul>
+        <li>Essay topic is announced on the spot.</li>
+        <li>Participants must write the essay within the given time limit.</li>
+        <li>Essays must be original and written individually.</li>
+        <li>Use of mobile phones or internet is not allowed unless specified by organizers.</li>
+      </ul>
+      <h3>Winning Criteria</h3>
+      <ul>
+        <li>Strength of arguments</li>
+        <li>Clarity of ideas</li>
+        <li>Grammar and writing quality</li>
+        <li>Logical structure of the essay</li>
+      </ul>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>
