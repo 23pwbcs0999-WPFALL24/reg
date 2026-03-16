@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechMesh Data Science Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(15, 109, 141, 0.14), transparent 34%),
+        radial-gradient(circle at 86% 8%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3.1vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.28rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      color: #163a6f;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc ul {
+      margin-top: 2px;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 640px;
+      background: #fbfdff;
+    }
+
+    th,
+    td {
+      border: 1px solid #dce6f2;
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #eef5fc;
+      color: #123f66;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    .module-sep {
+      border: 0;
+      border-top: 1px dashed #c9d9ea;
+      margin: 18px 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+
+      th,
+      td {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>COMPUTER CELL SOCIETY<br>University of Engineering and Technology, Peshawar<br>TechMesh 2026 - Official Rule Book</h1>
+      <p>Data Science Track modules and rules for the 3-Day Challenge.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#module-1">Module 1: Data Doppelganger</a></li>
+        <li><a href="#module-2">Module 2: City Whisperer</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="module-1">
+      <h2>MODULE 1: DATA DOPPELGANGER</h2>
+      <p><strong>Algorithm Competition | Data Science Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>Data Doppelganger is a live coding competition where teams build a personality-matching algorithm entirely on the event day. Each team is responsible for sourcing their own personality dataset beforehand and must arrive on the event day ready to use it. Teams develop an algorithm that finds data twins: two people whose personality profiles most closely match each other.</p>
+      <p>The algorithm must take personality inputs like tea vs. coffee preference, morning vs. night person, introvert vs. extrovert, and similar attributes, then output a Personality Card showing the two most similar individuals and why they match.</p>
+      <p>This is a one-day module, held on Day [X] of the 3-Day Challenge.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>3 to 4 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to DS and CS students</td></tr>
+            <tr><td>Team Lead</td><td>1 member per team (handles communication with organizers)</td></tr>
+            <tr><td>Department</td><td>Data Science / Computer Science</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Schedule</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Opening</td><td>Competition officially begins, teams set up their workspace</td></tr>
+            <tr><td>Coding Window</td><td>Teams build their algorithm (time limit: as set by organizers)</td></tr>
+            <tr><td>Submission</td><td>Code and output submitted to judges before deadline</td></tr>
+            <tr><td>Evaluation</td><td>Judges review submissions and score against criteria</td></tr>
+            <tr><td>Results</td><td>Winners announced at end of day</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Dataset Guidelines</h3>
+      <p>Each team is responsible for finding and bringing their own personality dataset. The dataset must be based on personality-related attributes such as:</p>
+      <ul>
+        <li>Tea or coffee preference</li>
+        <li>Morning person or night person</li>
+        <li>Introvert or extrovert</li>
+        <li>Preferred study environment (silent or with noise)</li>
+        <li>Risk-taking tendency</li>
+        <li>Decision-making style (logical vs. emotional)</li>
+        <li>Social energy level</li>
+        <li>Creative vs. analytical thinking style</li>
+      </ul>
+      <p>The dataset must contain a minimum of 100 entries and cover at least 8 distinct personality attributes. Teams are encouraged to explore public sources like Kaggle MBTI datasets and Open Psychometrics raw data. Teams may also collect their own survey data if minimum requirements are met. Fabricated or AI-generated datasets are strictly prohibited and result in disqualification.</p>
+
+      <h3>What Teams Must Build</h3>
+      <ul>
+        <li>A working algorithm that processes personality data and identifies the two most similar individuals</li>
+        <li>A Personality Card output showing the matched pair, top shared traits, and a similarity score or percentage</li>
+        <li>Clean, readable, well-commented code</li>
+        <li>A brief text explanation in code comments or a short README describing the approach</li>
+      </ul>
+
+      <h3>Rules and Regulations</h3>
+      <p><strong>General Rules</strong></p>
+      <ul>
+        <li>Python is the required programming language. Standard libraries such as pandas, NumPy, scikit-learn, and matplotlib are permitted.</li>
+        <li>Use of pre-trained large language models (for example, ChatGPT or Gemini) as the core matching engine is strictly prohibited. The algorithm must be the team&#39;s own logic.</li>
+        <li>Internet access is allowed only for referencing documentation and libraries, not for copying algorithmic solutions.</li>
+        <li>Teams can use AI tools for help, but direct copy-paste of full code or idea will lead to 0 marks.</li>
+        <li>All team members must be present throughout the event day. Absence of more than one member may result in score deductions.</li>
+        <li>Teams are not permitted to share code, datasets, or approaches with other teams during the competition.</li>
+        <li>Any form of plagiarism, including copying from online repositories, results in immediate disqualification.</li>
+      </ul>
+      <p><strong>Submission Rules</strong></p>
+      <ul>
+        <li>Teams must submit code and Personality Card output before the organizer deadline.</li>
+        <li>Late submissions are penalized as outlined in the penalties section.</li>
+        <li>Submitted code must be original work produced on the event day.</li>
+      </ul>
+
+      <h3>Accuracy Testing - Live Audience Evaluation</h3>
+      <p>Judges will select 3 to 4 volunteers from the audience. Each volunteer fills the personality form on the spot. The team runs the algorithm live on those responses, and a Personality Card is displayed showing whether a data twin exists and how strong the match is.</p>
+      <p>Judges score real-time performance on unseen data. A strong match with clear and visual explanation scores higher. Teams must run smoothly without prior knowledge of volunteer responses.</p>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Uniqueness and Novelty of Approach</td><td>20</td><td>Original matching logic; creative hybrid methods rewarded</td></tr>
+            <tr><td>Live Accuracy on Audience Data</td><td>20</td><td>How well the algorithm performs on real volunteer inputs selected by the judge</td></tr>
+            <tr><td>Code Quality and Structure</td><td>15</td><td>Clean, readable, well-commented code with logical flow and no redundancy</td></tr>
+            <tr><td>Visual Design of Personality Card</td><td>15</td><td>How informative, clear, and visually appealing the output card is</td></tr>
+            <tr><td>Creativity of Output</td><td>10</td><td>Engagement factor of the card and whether it tells a story about the match</td></tr>
+            <tr><td>Clarity of Approach (Comments/README)</td><td>10</td><td>How well the team explains logic and methodology in writing</td></tr>
+            <tr><td>Overall Presentation of Output</td><td>10</td><td>Whether final output feels polished and complete</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Violation</th>
+              <th>Penalty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Late submission</td><td>-5 marks per 15 minutes of delay</td></tr>
+            <tr><td>Use of a pre-trained AI model as the core engine</td><td>Immediate disqualification</td></tr>
+            <tr><td>Pre-written algorithm brought to the event</td><td>Immediate disqualification</td></tr>
+            <tr><td>Code copied from online repositories or other teams</td><td>Immediate disqualification</td></tr>
+            <tr><td>Fabricated or AI-generated dataset</td><td>Immediate disqualification</td></tr>
+            <tr><td>Absence of more than one team member</td><td>-10 marks</td></tr>
+            <tr><td>Failure to submit a Personality Card as output</td><td>-15 marks</td></tr>
+            <tr><td>Unsportsmanlike conduct or interference with other teams</td><td>-10 marks and formal warning</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Complete source code (Python file or notebook)</li>
+        <li>Personality Card output (screenshot, printed card, or displayed output)</li>
+        <li>Brief written explanation of the algorithm (in comments or a short README)</li>
+      </ul>
+    </section>
+
+    <hr class="module-sep">
+
+    <section class="rule-card" id="module-2">
+      <h2>MODULE 2: CITY WHISPERER</h2>
+      <p><strong>Algorithm Competition | Data Science Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>City Whisperer is a live coding competition inspired by this idea: can an algorithm guess where someone is from based on the way they answer a few questions? Teams build a city prediction model that takes personality and lifestyle responses and predicts the city in Khyber Pakhtunkhwa they most likely belong to.</p>
+      <p>On event day, judges select a random student from the audience. The student answers a short set of live questions. The team algorithm predicts the student&#39;s home city, for example Peshawar, Swat, D.I. Khan, Mardan, Abbottabad, or another city in KPK. Closer prediction means better score.</p>
+      <p>This is a one-day module, held on Day [X] of the 3-Day Challenge.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>3 to 4 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to DS and CS students</td></tr>
+            <tr><td>Team Lead</td><td>1 member per team (handles communication with organizers)</td></tr>
+            <tr><td>Department</td><td>Data Science / Computer Science</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Schedule</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Opening</td><td>Competition officially begins, teams set up workspace</td></tr>
+            <tr><td>Coding Window</td><td>Teams build algorithm (time limit set by organizers)</td></tr>
+            <tr><td>Submission</td><td>Code and output submitted to judges before deadline</td></tr>
+            <tr><td>Evaluation</td><td>Judges review submissions and score against criteria</td></tr>
+            <tr><td>Results</td><td>Winners announced at end of day</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Dataset Guidelines</h3>
+      <p>Each team must source a dataset linking lifestyle, cultural, and behavioral attributes to cities within Khyber Pakhtunkhwa. Suggested attributes include:</p>
+      <ul>
+        <li>Language or dialect preference (Pashto, Hindko, Saraiki, etc.)</li>
+        <li>Food preferences (chapli kabab, sajji, namkeen, etc.)</li>
+        <li>Typical daily routine and sleep patterns</li>
+        <li>Preferred mode of transport</li>
+        <li>Urban vs. rural lifestyle leaning</li>
+        <li>Climate preference (cold hills vs. hot plains)</li>
+        <li>Festivals and cultural events familiarity</li>
+        <li>Social gathering and hospitality norms</li>
+      </ul>
+      <p>The dataset must cover at least 15 distinct cities within KPK and contain at least 100 entries. Teams may gather their own survey data or use public sources (for example Kaggle and data.gov.pk). Fabricated or AI-generated datasets are strictly prohibited and lead to disqualification.</p>
+
+      <h3>What Teams Must Build</h3>
+      <ul>
+        <li>A working classification algorithm that predicts a person&#39;s most likely home city from lifestyle and cultural responses</li>
+        <li>A City Card output with predicted city, confidence/probability score, and top reasons behind prediction</li>
+        <li>A short input form or prompt list with at least 8 questions</li>
+        <li>Clean, readable, well-commented code</li>
+        <li>A brief explanation in comments or README about approach and model choice</li>
+      </ul>
+
+      <h3>Accuracy Testing - Live Audience Evaluation</h3>
+      <p>Judges will select 3 to 4 volunteers at random. Each volunteer answers the team&#39;s input questions live. The algorithm then outputs a City Card with predicted city and confidence score. Volunteers confirm prediction correctness, and judges evaluate live accuracy and confidence on unseen audience data.</p>
+
+      <h3>Rules and Regulations</h3>
+      <p><strong>General Rules</strong></p>
+      <ul>
+        <li>Python is required. Standard libraries like pandas, NumPy, scikit-learn, and matplotlib are permitted.</li>
+        <li>Pre-trained large language models cannot be used as the core prediction engine.</li>
+        <li>Internet access is allowed for documentation and libraries only, not for copying algorithmic solutions.</li>
+        <li>Teams can use AI tools for help, but direct copy-paste of full code or idea leads to 0 marks.</li>
+        <li>All team members must remain present throughout event day; absence of more than one member may reduce score.</li>
+        <li>Teams may not share code, datasets, or approaches with other teams during competition.</li>
+        <li>Any plagiarism, including copying from online repositories, results in immediate disqualification.</li>
+      </ul>
+      <p><strong>Submission Rules</strong></p>
+      <ul>
+        <li>Teams must submit code and City Card output before organizer deadline.</li>
+        <li>Late submissions are penalized per penalty policy.</li>
+        <li>Submitted code must be original work produced on event day.</li>
+      </ul>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Uniqueness and Novelty of Approach</td><td>20</td><td>Original classification logic and creative feature engineering/model choices</td></tr>
+            <tr><td>Live Accuracy on Audience Data</td><td>20</td><td>How correctly the model predicts city for real volunteers</td></tr>
+            <tr><td>Code Quality and Structure</td><td>15</td><td>Clean, readable, commented, and logically organized code</td></tr>
+            <tr><td>Visual Design of City Card</td><td>15</td><td>Clear, informative, and visually appealing prediction output</td></tr>
+            <tr><td>Creativity of Output</td><td>10</td><td>How engaging and compelling the explanation of prediction is</td></tr>
+            <tr><td>Clarity of Approach (Comments/README)</td><td>10</td><td>How well logic, features, and model choice are explained</td></tr>
+            <tr><td>Overall Presentation of Output</td><td>10</td><td>Whether final output feels polished and complete</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Violation</th>
+              <th>Penalty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Late submission</td><td>-5 marks per 15 minutes delay</td></tr>
+            <tr><td>Use of a pre-trained AI model as core engine</td><td>Immediate disqualification</td></tr>
+            <tr><td>Pre-written algorithm brought to event</td><td>Immediate disqualification</td></tr>
+            <tr><td>Code copied from repositories or other teams</td><td>Immediate disqualification</td></tr>
+            <tr><td>Fabricated or AI-generated dataset</td><td>Immediate disqualification</td></tr>
+            <tr><td>Absence of more than one team member</td><td>-10 marks</td></tr>
+            <tr><td>Failure to submit a City Card as output</td><td>-15 marks</td></tr>
+            <tr><td>Unsportsmanlike conduct or interference with other teams</td><td>-10 marks and formal warning</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Complete source code (Python file or notebook)</li>
+        <li>City Card output (screenshot, printed card, or displayed output)</li>
+        <li>Input question form used for audience volunteers</li>
+        <li>Brief written explanation of algorithm (comments or short README)</li>
+      </ul>
+
+      <p><strong>Module designed by:</strong> Head of Data Science | Computer Cell Society, UET Peshawar</p>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>

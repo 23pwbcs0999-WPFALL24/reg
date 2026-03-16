@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechMesh E-Gaming Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 13% 11%, rgba(15, 109, 141, 0.14), transparent 34%),
+        radial-gradient(circle at 86% 6%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 740px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.28rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      color: #163a6f;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>TECHMESH - Rule Book (E-Gaming)</h1>
+      <p>Official match rules, conduct requirements, and prize structure for E-Gaming competitions.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#fifa">FIFA</a></li>
+        <li><a href="#tekken">Tekken 8</a></li>
+        <li><a href="#pubg">PUBG Mobile</a></li>
+        <li><a href="#freefire">Free Fire</a></li>
+        <li><a href="#valorant-cs2">Valorant and CS2 (Shared Rulebook)</a></li>
+        <li><a href="#cod-split">COD 1v1 Split Screen</a></li>
+        <li><a href="#cod-team">COD (Team) - PC (Dummy Rulebook)</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="fifa">
+      <h2>FIFA</h2>
+      <h3>Game Settings</h3>
+      <ul>
+        <li>Mode: 1v1 Kick-Off</li>
+        <li>Format: Knockout (Single Elimination)</li>
+        <li>Time: 6 mins per half (Final: 8 mins per half)</li>
+        <li>Difficulty: World Class</li>
+        <li>Speed: Normal</li>
+        <li>Teams: Any club or national team</li>
+        <li>Same team use: Allowed</li>
+      </ul>
+      <h3>Match Rules</h3>
+      <ul>
+        <li>Injuries and offsides: ON</li>
+        <li>Handball: OFF</li>
+        <li>Weather: Clear</li>
+        <li>Camera: Default</li>
+        <li>Draw handling: Extra Time, then Penalties</li>
+      </ul>
+      <h3>Player Rules</h3>
+      <ul>
+        <li>No mods, macros, or turbo buttons.</li>
+        <li>Unauthorized pause can result in goal penalty or disqualification.</li>
+        <li>Report any technical issue immediately.</li>
+        <li>If not present at due time, walkover will be given after 10 minutes of match start time.</li>
+      </ul>
+      <h3>Fair Play</h3>
+      <ul>
+        <li>No abusive language, time-wasting, or glitches.</li>
+        <li>Cheating leads to instant disqualification.</li>
+      </ul>
+      <h3>Finals and Prizes</h3>
+      <ul>
+        <li>Final: 8 mins per half, then Extra Time and Penalties if draw.</li>
+        <li>1st Place: Cash plus Winner Certificate</li>
+        <li>2nd Place: Cash plus Runner-up Certificate</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="tekken">
+      <h2>Tekken 8</h2>
+      <h3>Game Info</h3>
+      <ul>
+        <li>Platform: PS5</li>
+        <li>Mode: 1v1 Versus</li>
+        <li>Format: Knockout</li>
+        <li>Match length: Best of 3 rounds</li>
+        <li>Finals: Best of 5 matches</li>
+        <li>Stage: Random</li>
+        <li>Round time: 60 seconds</li>
+      </ul>
+      <h3>Match Rules</h3>
+      <ul>
+        <li>Any unlocked character is allowed.</li>
+        <li>The loser may change character; the winner must stay.</li>
+        <li>No macros, turbo, or modded controllers.</li>
+        <li>Pausing mid-match means round loss, unless both players agree to replay.</li>
+        <li>If not present at due time, walkover will be given after 10 minutes of match start time.</li>
+      </ul>
+      <h3>Conduct</h3>
+      <ul>
+        <li>No abusive behavior, cheating, or intentional delays.</li>
+        <li>Misconduct results in instant disqualification.</li>
+      </ul>
+      <h3>Prizes</h3>
+      <ul>
+        <li>1st Place: Cash plus Winner Certificate</li>
+        <li>2nd Place: Cash plus Runner-up Certificate</li>
+        <li>All participants receive Certificates of Participation.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="pubg">
+      <h2>PUBG Mobile</h2>
+      <ul>
+        <li>Game mode: Classic Mode only</li>
+        <li>Players must be present at event location.</li>
+        <li>Mobile players only; emulators are strictly banned.</li>
+        <li>Winning team and runner-up will be awarded prize money.</li>
+        <li>Hacks, third-party apps, or unfair means lead to instant disqualification.</li>
+        <li>Join lobby on time to avoid disqualification.</li>
+        <li>If not present at due time, walkover will be given after 10 minutes of match start time.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="freefire">
+      <h2>Free Fire</h2>
+      <ul>
+        <li>Game mode: Battle Royale (BR) Mode only</li>
+        <li>Players must be present at event location.</li>
+        <li>Mobile players only; emulators are strictly banned.</li>
+        <li>Winning team and runner-up will be awarded prize money.</li>
+        <li>Hacks, third-party apps, or unfair means lead to instant disqualification.</li>
+        <li>Join lobby on time to avoid disqualification.</li>
+        <li>If not present at due time, walkover will be given after 10 minutes of match start time.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="valorant-cs2">
+      <h2>Valorant and CS2 (Shared Rulebook)</h2>
+      <h3>Match Format</h3>
+      <ul>
+        <li>Best of 1 (Bo1) for all rounds except Semi-Finals and Finals, which are Best of 3 (Bo3).</li>
+        <li>Map: Random selected by toss</li>
+      </ul>
+      <h3>Match Rules</h3>
+      <ul>
+        <li>If any player disconnects, rejoin is allowed only with proper proof of disconnection.</li>
+        <li>Without proof, match continues with remaining players (for example, 5v4).</li>
+        <li>No unauthorized programs, macros, or scripts allowed.</li>
+        <li>No substitutions allowed.</li>
+      </ul>
+      <h3>Match Conduct</h3>
+      <ul>
+        <li>All players must check in at the fixture time.</li>
+        <li>Players must maintain professional behavior and respect opponents and officials.</li>
+        <li>Disruptions or cheating lead to disqualification.</li>
+      </ul>
+      <h3>Voice Chat</h3>
+      <ul>
+        <li>Third-party communication software is not allowed during the match.</li>
+        <li>Every player must use in-game voice chat.</li>
+      </ul>
+      <h3>Equipment</h3>
+      <ul>
+        <li>Players may bring their own keyboard, mouse, headphones, and mouse pad.</li>
+        <li>Organizer-provided equipment will also be available.</li>
+      </ul>
+      <h3>Technical Pauses</h3>
+      <ul>
+        <li>Allowed only for valid technical issues or emergency situations.</li>
+        <li>Players must call pause through referee or match admin.</li>
+      </ul>
+      <h3>Disciplinary Rules</h3>
+      <ul>
+        <li>Cheating with unauthorized software or exploit use leads to instant disqualification.</li>
+        <li>Unsportsmanlike conduct includes verbal abuse, harassment, or equipment tampering.</li>
+        <li>Penalties may escalate from warning to round loss to match forfeit.</li>
+        <li>Delay of game: Late 5 min = round loss; Late 15 min = match forfeit.</li>
+      </ul>
+      <h3>Prizes and Recognition</h3>
+      <ul>
+        <li>Prizes and awards are announced before tournament start.</li>
+        <li>Winners receive announced prize pool, certificates, and crests.</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="cod-split">
+      <h2>COD 1v1 Split Screen</h2>
+      <h3>Format</h3>
+      <ul>
+        <li>Mode: 1v1 split screen</li>
+        <li>Format: Knockout brackets</li>
+        <li>Map and mode pool announced by admins before match start</li>
+      </ul>
+      <h3>Rules</h3>
+      <ul>
+        <li>No controller mods, macros, or rapid-fire tools.</li>
+        <li>No stream sniping, intentional stalling, or unsportsmanlike behavior.</li>
+        <li>Referee decisions are final for match disputes.</li>
+      </ul>
+      <h3>Walkover Policy</h3>
+      <ul>
+        <li>If not present at due time, walkover will be given after 10 minutes of match start time.</li>
+      </ul>
+      <p>Detailed rule format for this module can be expanded by organizers before the event.</p>
+    </section>
+
+    <section class="rule-card" id="cod-team">
+      <h2>COD (Team) - PC (Dummy Rulebook)</h2>
+      <p>This is a temporary placeholder rulebook provided until official final rules are shared.</p>
+      <h3>Proposed Format</h3>
+      <ul>
+        <li>Platform: PC</li>
+        <li>Team size: 4v4</li>
+        <li>Bracket type: Single Elimination</li>
+        <li>Standard lobby settings with referee host</li>
+      </ul>
+      <h3>Proposed Competitive Rules</h3>
+      <ul>
+        <li>No hacks, scripts, macros, or unauthorized software.</li>
+        <li>No exploiting map glitches or game bugs.</li>
+        <li>All players must follow admin instructions and match timings.</li>
+        <li>Toxic behavior or harassment can result in match penalties or disqualification.</li>
+      </ul>
+      <h3>Walkover and Penalties</h3>
+      <ul>
+        <li>Team not ready within 10 minutes of fixture time may receive walkover against them.</li>
+        <li>Repeated delays can lead to round or match forfeit.</li>
+      </ul>
+      <p>Final official COD (Team) - PC rulebook will replace this section when provided by organizers.</p>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>
