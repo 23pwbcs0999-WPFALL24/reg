@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechMesh AI Track Rule Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="TechMesh'26.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2233;
+      --primary: #0f6d8d;
+      --primary-deep: #0a4b67;
+      --surface: #ffffff;
+      --border: #d8e2ef;
+      --muted: #52607a;
+      --shadow: 0 16px 40px rgba(10, 35, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(15, 109, 141, 0.14), transparent 34%),
+        radial-gradient(circle at 86% 8%, rgba(245, 158, 11, 0.18), transparent 28%),
+        linear-gradient(140deg, #f2f8ff 0%, #f7fbff 52%, #fff9ee 100%);
+      padding: 24px 14px 36px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, #ffffff 0%, #eef8ff 100%);
+      border: 1px solid rgba(216, 226, 239, 0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      padding: 18px 16px 24px;
+    }
+
+    .logo {
+      width: min(290px, 86vw);
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3.1vw, 2.25rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 760px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .toc,
+    .rule-card {
+      margin-top: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(13, 44, 78, 0.1);
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: var(--primary-deep);
+      font-size: 1.28rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      color: #163a6f;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul,
+    ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .toc ul {
+      margin-top: 2px;
+    }
+
+    .toc a {
+      color: var(--primary-deep);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      background: #fbfdff;
+    }
+
+    th,
+    td {
+      border: 1px solid #dce6f2;
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    th {
+      background: #eef5fc;
+      color: #123f66;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary) 0%, #1f91b5 100%);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(15, 109, 141, 0.24);
+    }
+
+    .back-link:hover {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, #176f8d 100%);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .hero,
+      .toc,
+      .rule-card {
+        border-radius: 14px;
+        padding: 14px;
+      }
+
+      th,
+      td {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+      <h1>COMPUTER CELL SOCIETY<br>University of Engineering and Technology, Peshawar<br>TechMesh 2026 - AI Track Rule Book</h1>
+      <p>Official AI Track modules, rules, marks criteria, penalties, and submission checklists.</p>
+    </header>
+
+    <section class="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#module-1">Module 1: Prompt Arena</a></li>
+        <li><a href="#module-2">Module 2: Hallucination Hunt</a></li>
+        <li><a href="#module-3">Module 3: AI Storyteller</a></li>
+        <li><a href="#module-4">Module 4: Model Face-Off</a></li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="important-summary">
+      <h2>Important Participation Summary</h2>
+      <p>To avoid confusion: AI Track work must be created live on event day at the venue using the organizer-approved platform and tools. Teams should bring laptops, chargers, and allowed notes, but pre-made final prompts, pre-built models, pre-written stories, or pre-completed reports are not accepted for scoring. Submissions are digital unless organizers explicitly announce a physical submission requirement for any round.</p>
+    </section>
+
+    <section class="rule-card" id="module-1">
+      <h2>MODULE 1 · AI TRACK - PROMPT ARENA</h2>
+      <p><strong>Prompt Engineering Competition · AI Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>Prompt Arena is a live prompt engineering battle where teams compete to produce accurate and creative outputs from a fixed AI model using prompt design only. No fine-tuning and no code changes are allowed. Teams receive identical base tasks and are judged on output quality and prompt craftsmanship.</p>
+      <p>This module tests role assignment, few-shot prompting, output constraints, reasoning strategy, and adversarial robustness.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>2 to 3 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to CS, DS, and SE students</td></tr>
+            <tr><td>Team Lead</td><td>1 member per team (primary communicator)</td></tr>
+            <tr><td>Track</td><td>Artificial Intelligence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Structure</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Round</th>
+              <th>Focus</th>
+              <th>Challenge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Round 1</td><td>Precision</td><td>Extract a specific factual answer with minimal hallucination</td></tr>
+            <tr><td>Round 2</td><td>Creativity</td><td>Generate a culturally relevant creative piece under strict constraints</td></tr>
+            <tr><td>Round 3</td><td>Adversarial</td><td>Prompt the model to refuse an embedded trick or trap in the task description</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Teams Must Produce</h3>
+      <ul>
+        <li>One final prompt for each round (submitted before each round deadline)</li>
+        <li>One-paragraph written rationale per round explaining prompt design choices</li>
+        <li>Entirely original prompts (no copying from prompt libraries or leaderboards)</li>
+        <li>Teams may iterate within each round, but only the last submission is scored</li>
+      </ul>
+
+      <h3>Rules and Regulations</h3>
+      <ul>
+        <li>The AI model and interface are provided by organizers; only the designated platform may be used.</li>
+        <li>Prompt injection against judge interfaces or other teams leads to immediate disqualification.</li>
+        <li>Printed notes and reference materials are allowed; internet access is restricted to documentation.</li>
+        <li>Using another LLM or AI assistant to generate prompts is strictly prohibited.</li>
+        <li>All team members must be present; unnotified absence leads to round forfeiture.</li>
+        <li>Prompts must not contain offensive, harmful, or politically sensitive content.</li>
+      </ul>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Output Quality and Accuracy</td><td>25</td><td>Whether output solves the task correctly</td></tr>
+            <tr><td>Prompt Ingenuity and Design</td><td>20</td><td>Structured, clever, and non-obvious prompt strategy</td></tr>
+            <tr><td>Adversarial Robustness (Round 3)</td><td>20</td><td>Ability to survive trap instructions without failing</td></tr>
+            <tr><td>Written Rationale</td><td>15</td><td>Clear and convincing explanation of prompt logic</td></tr>
+            <tr><td>Brevity and Efficiency</td><td>10</td><td>High quality with fewer prompt tokens</td></tr>
+            <tr><td>Consistency Across Rounds</td><td>10</td><td>Stable quality over precision, creativity, and adversarial tasks</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <ul>
+        <li>Late prompt submission: -5 marks per round</li>
+        <li>Prompt injection or sabotage attempt: Immediate disqualification</li>
+        <li>AI-generated prompts detected: Round score = 0</li>
+        <li>Missing written rationale: -8 marks per round</li>
+        <li>Offensive or harmful prompt content: Immediate disqualification</li>
+      </ul>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Final prompt text for each of the 3 rounds</li>
+        <li>Written rationale paragraph per round</li>
+        <li>Team name and member details on submission sheet</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="module-2">
+      <h2>MODULE 2 · AI TRACK - HALLUCINATION HUNT</h2>
+      <p><strong>AI Fact-Checking and Red-Teaming Challenge · AI Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>Hallucination Hunt challenges teams to identify factual hallucinations in AI-generated documents, including fabricated citations, invented statistics, and subtle logic errors. Teams must find, classify, and correct each issue.</p>
+      <p>This module evaluates critical thinking, fact-checking discipline, and real-world AI red-teaming ability.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>2 to 3 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to CS, DS, SE, and related departments</td></tr>
+            <tr><td>Team Lead</td><td>1 member per team</td></tr>
+            <tr><td>Track</td><td>Artificial Intelligence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Structure</h3>
+      <p>Each team receives the same document pack containing 3 domain documents (science, history, technology), each with 5 to 12 hidden hallucinations.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Difficulty</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tier 1</td><td>Obvious</td><td>Clearly fabricated facts such as wrong dates or impossible numbers</td></tr>
+            <tr><td>Tier 2</td><td>Subtle</td><td>Plausible-looking errors such as near-correct names and figures</td></tr>
+            <tr><td>Tier 3</td><td>Adversarial</td><td>Logically consistent but factually false reasoning chains</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Teams Must Produce</h3>
+      <ul>
+        <li>Completed Hallucination Report with location of each detected error</li>
+        <li>Error classification for each finding: Wrong Fact / Fabricated Citation / Invented Statistic / Logic Error</li>
+        <li>One-sentence correction for each identified hallucination</li>
+        <li>Optional confidence score (0 to 100) for each finding</li>
+      </ul>
+
+      <h3>Rules and Regulations</h3>
+      <ul>
+        <li>Books, printed notes, and offline documentation are allowed.</li>
+        <li>Internet is allowed only for fact-checking.</li>
+        <li>Using AI tools for automated scanning or detection is prohibited.</li>
+        <li>Teams must not communicate findings with other teams during the competition window.</li>
+        <li>False positives receive penalties.</li>
+        <li>Judge master list is final; disputes must be submitted in writing within 10 minutes of results.</li>
+      </ul>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>True Positives Found</td><td>30</td><td>Correctly detected hallucinations (scaled)</td></tr>
+            <tr><td>Correct Classification</td><td>20</td><td>Accurate tagging of error type</td></tr>
+            <tr><td>Quality of Corrections</td><td>20</td><td>Factually correct and concise fixes</td></tr>
+            <tr><td>False Positive Penalty</td><td>-5</td><td>Deducted for incorrectly flagging valid statements</td></tr>
+            <tr><td>Confidence Score Calibration</td><td>15</td><td>Well-calibrated uncertainty estimates</td></tr>
+            <tr><td>Report Clarity and Structure</td><td>15</td><td>Professional, readable reporting format</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <ul>
+        <li>Late Hallucination Report: -5 marks per 15 minutes</li>
+        <li>Use of AI tools for automated error detection: Immediate disqualification</li>
+        <li>Plagiarism from other teams: Immediate disqualification</li>
+        <li>Each false positive (wrong flagging): -2 marks each</li>
+        <li>Absence of more than one team member: -10 marks</li>
+      </ul>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Completed Hallucination Report (all 3 documents covered)</li>
+        <li>Error classification tag for each finding</li>
+        <li>One-sentence correction per hallucination</li>
+        <li>Optional confidence scores alongside each finding</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="module-3">
+      <h2>MODULE 3 · AI TRACK - AI STORYTELLER</h2>
+      <p><strong>Human-AI Collaborative Narrative Challenge · AI Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>AI Storyteller is a collaborative narrative challenge where teams co-author a short story with an AI language model. Teams write alternating human and AI paragraphs, directing the model toward a meaningful story rooted in KPK culture, folklore, or contemporary life.</p>
+      <p>The best score comes from strong storytelling, authentic cultural references, and clear human direction over AI output.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>2 to 4 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to all departments</td></tr>
+            <tr><td>Team Lead</td><td>1 member (story director controlling prompt decisions)</td></tr>
+            <tr><td>Track</td><td>Artificial Intelligence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Structure</h3>
+      <p>Each team gets the same one-sentence KPK-based story seed and then alternates human and AI paragraphs until story completion.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Requirement</th>
+              <th>Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Story Length</td><td>10 to 14 paragraphs total (alternating Human / AI)</td></tr>
+            <tr><td>Human Paragraphs</td><td>Minimum 5 (clearly marked)</td></tr>
+            <tr><td>AI Paragraphs</td><td>Minimum 4 (raw output submitted with edited version)</td></tr>
+            <tr><td>Cultural Anchor</td><td>At least 2 authentic KPK cultural elements</td></tr>
+            <tr><td>Live Pitch</td><td>1-minute audience pitch at judging</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Teams Must Produce</h3>
+      <ul>
+        <li>Complete story (10 to 14 paragraphs) with Human / AI labels on each paragraph</li>
+        <li>Raw AI output log (prompts used and unedited AI responses)</li>
+        <li>One-page Story Direction Note explaining prompting and editing choices</li>
+        <li>1-minute verbal pitch to the audience during judging</li>
+      </ul>
+
+      <h3>Rules and Regulations</h3>
+      <ul>
+        <li>Only the designated organizer-provided AI tool may be used.</li>
+        <li>Teams may edit AI text, but both raw and edited versions are mandatory.</li>
+        <li>Offensive, discriminatory, or politically inflammatory content is prohibited.</li>
+        <li>Inauthentic or stereotyped cultural portrayal is penalized.</li>
+        <li>Audience vote contributes 10 marks.</li>
+        <li>Fully AI-generated stories without meaningful human direction score zero in Authorship.</li>
+      </ul>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Narrative Quality and Engagement</td><td>25</td><td>Compelling and coherent story flow</td></tr>
+            <tr><td>Cultural Authenticity</td><td>20</td><td>Genuine, respectful KPK references</td></tr>
+            <tr><td>Human Authorship and Direction</td><td>20</td><td>Meaningful human steering of AI output</td></tr>
+            <tr><td>AI Collaboration Quality</td><td>15</td><td>Prompt quality and seamless human-AI transitions</td></tr>
+            <tr><td>Audience Vote</td><td>10</td><td>Most engaging live audience choice</td></tr>
+            <tr><td>Story Direction Note</td><td>10</td><td>Clear reflection on creative process and prompting decisions</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <ul>
+        <li>Fewer than 5 human-written paragraphs: -15 marks</li>
+        <li>Missing raw AI output log: -10 marks</li>
+        <li>Cultural fabrication or disrespectful portrayal: -15 marks and formal warning</li>
+        <li>Late submission: -5 marks per 15 minutes</li>
+        <li>Offensive story content: Immediate disqualification</li>
+      </ul>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Complete story with Human / AI labels per paragraph</li>
+        <li>Raw AI output log (prompts used and unedited responses)</li>
+        <li>One-page Story Direction Note</li>
+        <li>Team prepared for 1-minute live audience pitch</li>
+      </ul>
+    </section>
+
+    <section class="rule-card" id="module-4">
+      <h2>MODULE 4 · AI TRACK - MODEL FACE-OFF</h2>
+      <p><strong>Live ML Model Building and Comparison Showdown · AI Track</strong></p>
+
+      <h3>What Is This Module?</h3>
+      <p>Model Face-Off is a speed-build ML competition where teams receive the same tabular dataset on event day and must train, compare, and defend multiple models live. Teams are scored on both model performance and their explanation of why the winning model performed best.</p>
+      <p>The dataset may include missing values, class imbalance, and noisy features. Teams must handle these issues within the competition window.</p>
+
+      <h3>Team Composition</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Team Size</td><td>3 to 4 members</td></tr>
+            <tr><td>Eligibility</td><td>Open to DS and CS students</td></tr>
+            <tr><td>Team Lead</td><td>1 member per team</td></tr>
+            <tr><td>Track</td><td>Artificial Intelligence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Event Day Structure</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Phase 1 - EDA</td><td>Dataset exploration and understanding (30 min)</td></tr>
+            <tr><td>Phase 2 - Build</td><td>Train minimum 3 different ML models</td></tr>
+            <tr><td>Phase 3 - Compare</td><td>Create Model Scorecard for head-to-head evaluation</td></tr>
+            <tr><td>Phase 4 - Defend</td><td>Live 3-minute explanation and judge Q and A</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Teams Must Produce</h3>
+      <ul>
+        <li>At least 3 trained ML models (for example Logistic Regression, Random Forest, Gradient Boosting, SVM, KNN)</li>
+        <li>Model Scorecard comparing all models across relevant metrics</li>
+        <li>Explainability output for best model (SHAP, feature weights, or similar)</li>
+        <li>Clean, well-commented Python notebook or script</li>
+        <li>3-minute live defense of preprocessing and model choice</li>
+      </ul>
+
+      <h3>Technical Stack</h3>
+      <p>Python is required. Allowed libraries include pandas, NumPy, scikit-learn, matplotlib, seaborn, SHAP, XGBoost, LightGBM, and imbalanced-learn. Deep learning frameworks are allowed but not favored. AutoML tools are strictly prohibited.</p>
+
+      <h3>Rules and Regulations</h3>
+      <ul>
+        <li>Dataset is distributed at competition start; prior collection is not allowed.</li>
+        <li>AutoML platforms and pre-trained model APIs are prohibited.</li>
+        <li>Internet access is allowed only for library documentation.</li>
+        <li>AI coding assistants may be used for syntax help only; wholesale generation is penalized.</li>
+        <li>All team members must attend live defense; absent members lose marks.</li>
+        <li>Data leakage causes zero score in accuracy-based metrics.</li>
+      </ul>
+
+      <h3>Marks Criteria</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Marks</th>
+              <th>What Judges Look For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Model Performance (Best Model)</td><td>25</td><td>Best test-set metrics compared with other teams</td></tr>
+            <tr><td>Model Diversity and Comparison</td><td>20</td><td>Breadth and quality of Model Scorecard</td></tr>
+            <tr><td>Explainability Output</td><td>20</td><td>How clearly team explains model behavior</td></tr>
+            <tr><td>Live Defence</td><td>15</td><td>Confidence, depth, and clarity in Q and A</td></tr>
+            <tr><td>Code Quality and EDA</td><td>10</td><td>Readable code and solid preprocessing</td></tr>
+            <tr><td>Handling Data Issues</td><td>10</td><td>Robust treatment of noise, missing values, and imbalance</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Penalties</h3>
+      <ul>
+        <li>Fewer than 3 trained models: -20 marks</li>
+        <li>AutoML or pre-trained model API detected: Immediate disqualification</li>
+        <li>Data leakage detected: Accuracy metrics score = 0</li>
+        <li>Missing Model Scorecard: -15 marks</li>
+        <li>Late submission: -5 marks per 15 minutes</li>
+        <li>Absence from live defense: -5 marks per absent member</li>
+      </ul>
+
+      <h3>Submission Checklist</h3>
+      <ul>
+        <li>Python notebook or script containing all 3 or more models</li>
+        <li>Model Scorecard visual comparison</li>
+        <li>Explainability output for best model (SHAP or feature importance)</li>
+        <li>Team prepared for 3-minute live defense with judge Q and A</li>
+      </ul>
+    </section>
+
+    <a class="back-link" href="index.html">Back to Registration</a>
+  </div>
+</body>
+</html>
