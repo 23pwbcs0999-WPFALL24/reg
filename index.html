@@ -54,7 +54,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 16px;
       margin: 6px 0 14px;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -62,6 +64,13 @@
       height: auto;
       display: block;
       filter: drop-shadow(0 8px 20px rgba(15, 109, 141, 0.18));
+    }
+
+    .society-logo {
+      width: min(120px, 34vw);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 6px 16px rgba(15, 109, 141, 0.16));
     }
 
     h1 {
@@ -209,6 +218,10 @@
         padding: 14px 14px 20px;
       }
 
+      .society-logo {
+        width: min(100px, 28vw);
+      }
+
       .module-card {
         border-radius: 14px;
         padding: 16px;
@@ -221,6 +234,7 @@
     <header class="hero">
       <div class="brand">
         <img class="logo" src="TechMesh'26.png" alt="TechMesh 26 Logo">
+        <img class="society-logo" src="ComputerCellLogo.png" alt="Computer Cell Society Logo">
       </div>
       <h1>TechMesh 2026 Event Registration</h1>
       <p>Choose your module and register for the competitions that match your talent. Explore technical, e-gaming, engineering, and non-technical events in one professional portal.</p>
